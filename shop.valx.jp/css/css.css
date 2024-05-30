@@ -1,0 +1,1899 @@
+/*------------------------------------
+* PC,SP共通部分
+*-------------------------------------*/
+/* リセット */
+body { margin: 0;}
+
+#lp-form h1,
+#lp-form h2,
+#lp-form h3,
+#lp-form h4,
+#lp-form h5,
+#lp-form h6,
+#lp-form p,
+#lp-form ul,
+#lp-form ol,
+#lp-form li,
+#lp-form dl,
+#lp-form dt,
+#lp-form dd,
+#lp-form blockquote {
+  margin: 0;
+}
+
+#lp-form ul,
+#lp-form ol {
+  ist-style: none inside;
+}
+
+#lp-form img,
+#lp-form a img {
+  border: 0;
+  vertical-align: middle;
+}
+
+#lp-form .clearfix {
+  zoom: 1;
+}
+
+#lp-form .clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+#lp-form {
+  font-size: 12px;
+  line-height: 1.42857143;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+#lp-form table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Form 項目と入力ボックス間の空白調節*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+.col-24 {width: 100%;}
+.col-23 {width: 95.83333333%;}
+.col-22 {width: 91.66666667%;}
+.col-21 {width: 87.5%;}
+.col-20 {width: 83.33333333%;}
+.col-19 {width: 79.16666667%;}
+.col-18 {width: 75%;}
+.col-17 {width: 70.83333333%;}
+.col-16 {width: 66.66666667%;}
+.col-15 {width: 62.5%;}
+.col-14 {width: 58.33333333%;}
+.col-13 {width: 54.16666667%;}
+.col-12 {width: 50%;}
+.col-11 {width: 45.83333333%;}
+.col-10 {width: 41.66666667%;}
+.col-9 {width: 37.5%;}
+.col-8 {width: 33.33333333%;}
+.col-7 {width: 29.16666667%;}
+.col-6 {width: 25%;}
+.col-5 {width: 20.83333333%;}
+.col-4 {width: 16.66666667%;}
+.col-3 {width: 12.5%;}
+.col-2 {width: 8.33333333%;}
+.col-1 {width: 4.16666667%;}
+
+/*------------------------------------
+* PC部分
+*-------------------------------------*/
+/* 本フォーム全体  */
+.form_container_ec {
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow: hidden;
+}
+.form_main_container_ec {
+  font-size:12px;
+  width: 100%;
+  border-radius:3px
+}
+.landing_form_label_ec {
+  padding: 15px;
+}
+/* フォームの項目名ラベル */
+.form_box_label {
+  background: #cadefc;
+  border-bottom: 1px solid #C3C3C3;
+  border-top: 1px solid #C3C3C3;
+  padding: 2%;
+  vertical-align: middle;
+  text-align: left;
+  color: #333;
+  margin-bottom: 2%;
+}
+span.form_required_ec{
+  padding: 2px 4px;
+  margin-left: 5px;
+  display: inline-block;
+  float: right !important;
+}
+/* フォーム入力ボックス内の基本デザイン */
+table.landing_form_ec {
+  width: 852px;
+  margin: 0 auto;
+}
+/* フォーム一項目　項目名ラベルと入力ボックス */
+.landing_form_ec tr {
+  line-height: 18px;
+  font-size: 14px;
+}
+/* フォーム左側　項目名ラベル */
+.landing_form_ec th {
+  text-align: left;
+  vertical-align: top;
+  padding: 13px 11px;
+}
+/* フォーム右側　入力ボックス */
+.landing_form_ec td {
+  width: 584px;
+  padding: 13px 5px;
+}
+/* フォームトップメッセージ */
+.login_message_ec,
+.purchase_message_ec {
+  font-weight: normal;
+  font-size: 14px;
+  padding:20px 0px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+/* エラーメッセージ背景 */
+.alert-danger_ec {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.alert-success_ec {
+  background-color: #DFF0D8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+
+.form_main_container_sp_ec .formError {
+  width: 200px;
+}
+
+.form_main_container_ec .formError {
+  width: 470px;
+}
+
+.formError .formErrorContent {
+  width: 60%;
+  font-size: 100%;
+}
+
+.alert_ec {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+p.caution_ec {
+  padding-top:10px;
+  font-size: 14px;
+}
+.optin_view_ec,
+.agreement_view_ec,
+.order_checklist_view_ec {
+  margin-left: 4%;
+  padding-top: 20px;
+  position: relative;
+}
+
+.submit_ec {
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#option_types {
+  margin-top: 10px;
+}
+
+#option_types:empty {
+  display: none;
+}
+
+.option_type{
+  margin: 5px 0;
+}
+
+.option_type label {
+  display: inline-block;
+  width: 80px;
+}
+
+.form_group_ec {
+  padding-left: 2%;
+  padding-right: 2%;
+  position: relative;
+}
+.form_main_container_ec div.form_group_ec input{
+  padding: 10px 10px;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form_main_container_ec div.form_group_ec input[type=checkbox]{
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.form_main_container_ec div.form_group_ec select{
+  padding: 10px 10px;
+  height: 40px;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form_main_container_ec div.form_group_ec .disabled-input-ec {
+  pointer-events: none;
+  background-color: #ccc !important;
+  opacity: 0.7;
+}
+input.input_box_ec { width:70%; }
+select.input_box_product_ec { min-width:50%; }
+p.input_product_ec { display:inline-block; }
+input.input_box_name_ec { width:70%; }
+input.input_box_name1_ec { width:70%; }
+input.input_box_name2_ec { width:70%; }
+input.input_box_kana_ec { width:70%; }
+input.input_box_kana1_ec { width:70%; }
+input.input_box_kana2_ec { width:70%; }
+select.input_box_sex_ec { width: 25%; }
+select.input_box_job_ec { width: 70%; }
+select.input_box_birth_year_ec { width: 25%; }
+select.input_box_birth_month_ec { width: 15%; }
+select.input_box_birth_day_ec { width: 15%; }
+input.input_box_zip1_ec { width: 50px; }
+input.input_box_zip2_ec { width: 60px; }
+select.input_box_pref_ec { width: 150px; }
+input.input_box_addr1_ec { width: 70%; }
+input.input_box_addr2_ec { width: 70%; }
+input.input_box_addr3_ec { width: 70%; }
+input.input_box_tel_ec { width: 70%; }
+input.input_box_tel1_ec { width: 45px; }
+input.input_box_tel2_ec { width: 45px; }
+input.input_box_tel3_ec { width: 45px; }
+input.input_box_fax_ec { width: 70%; }
+input.input_box_fax1_ec { width: 45px; }
+input.input_box_fax2_ec { width: 45px; }
+input.input_box_fax3_ec { width: 45px; }
+input.input_box_email_ec { width: 70%; }
+input.input_box_email_confirm_ec { width: 70%; }
+input.input_box_customer_number_ec { width: 70%; }
+select.input_box_card_method_ec { width: 50%; }
+select.input_box_card_times_ec { width: 15%; }
+input.input_box_card_number_ec { width: 70%; }
+select.input_box_card_month_ec { width: 15%; }
+select.input_box_card_year_ec { width: 15%; }
+input.input_box_card_name_ec { width: 70%; }
+
+p.form_box_label_ec strong { font-weight: bold; }
+p.form_box_label_ec label { font-weight: bold; }
+div.form_group_ec p {}
+div.form_group_ec span { font-weight: bold; }
+div.scheduled_delivery_date_text_ec {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+div.pre_ordered_delivery_description_text_ec {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.preview_container_ec > table th,
+.preview_container_ec > table td {
+  border: 1px solid #d0dcec;
+}
+
+.table_bordered_ec {
+  border: 0px !important;
+}
+
+.table_ec {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table_ec tr > .pull_right_ec {
+  text-align: right;
+}
+
+.table_ec tr > th.product_name_ec {
+  width: 60%;
+}
+
+.table_ec tr > th.product_price_ec {
+  width: 15%;
+}
+
+.table_ec tr > th.product_quantity_ec {
+  width: 10%;
+}
+
+.table_ec tr > th.product_sub_total_ec {
+  width: 15%;
+}
+
+.total_color_ec {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.without_border_ec {
+  border: none !important;
+}
+
+/* Paypal */
+#paypal-button-container {
+  width: 50%;
+}
+
+/* Amazon Pay */
+.amazon_pay_box_ec {
+  border: solid 1px #C3C3C3;
+  margin: 10px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.amazon_pay_title_ec {
+  margin: 0 auto 10px auto !important;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 25px;
+  color: #df1800;
+  font-weight: bold;
+}
+
+.amazon_pay_subtitle_ec {
+  margin: 0 auto 10px auto !important;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #e6a300;
+}
+
+.amazon_pay_message_ec {
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.amazon_pay_not_use_message_ec {
+  height: 32px;
+  margin: 0 auto !important;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  color: #e6a300;
+}
+
+.amazon_pay_button_all_ec {
+  margin: 20px auto 20px;
+  width: 300px;
+}
+
+.amazon_pay_button_wallet_ec {
+  padding-top: 15px;
+  margin-left: -25px;
+}
+
+.amazon_pay_button_wallet_ec input.billing_agreement_ec {
+  visibility: hidden;
+  font-size: 0px !important;
+}
+
+.address_book_widget_wrapper_ec {
+  height: 228px;
+}
+
+.wallet_widget_wrapper_ec {
+  height: 228px;
+  width:417px;
+  float:left;
+  margin-right:6px;
+}
+
+.consent_widget_wrapper_ec {
+  height:193px;
+  width:417px;
+  float:left;
+  margin-top: 5px;
+}
+
+.consent_wrapper_ec {
+  height: 30px;
+  width: 405px;
+  color: white;
+  background: red;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.consent_wrapper_ec > span.consent_message_ec {
+  padding: 0 0 0 10px;
+}
+
+.consent_wrapper_ec > span.consent_mandatory_ec {
+  float: right;
+  background: white;
+  color: red;
+  padding: 0 4px;
+}
+
+.consent_wrapper_ec > input.consent_checkbox_ec {
+  visibility: hidden;
+}
+
+/* AmazonPay popup >> */
+.amazon_pay_popup_box_ec {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+.amazon_pay_popup_content_ec {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30%;
+  max-height: 250px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.amazon_pay_popup_title_ec {
+  font-size: 20px;
+}
+
+.amazon_pay_popup_close_ec {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  border-style: none;
+  cursor: pointer;
+}
+
+.amazon_pay_popup_subtitle_ec {
+  margin: 40px 0 30px;
+  font-size: 18px;
+}
+
+.amazon_pay_popup_body_ec {
+  margin: 20px auto 20px;
+  width: 300px;
+}
+/* << AmazonPay popup */
+
+.login_message_box_ec {
+  width: 852px;
+  margin: 20px auto 0px auto;
+  border: solid 1px #C3C3C3;
+}
+
+p.login_message_wrapper_ec {
+  font-size: 14px;
+  margin: 20px 0 !important;
+  text-align: center;
+}
+
+/* Socialplus */
+.socialplus_ec {
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
+}
+
+.socialplus_ec .button-container {
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
+
+.socialplus_ec .button-container .button {
+  position: relative;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 40px;
+  padding-left: 40px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.socialplus_ec .button-container .button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+}
+
+.socialplus_ec .button-container .button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 40px;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.socialplus_ec .button-container .btn-facebook {
+  background-color: #4267b2;
+}
+
+.socialplus_ec .button-container .btn-facebook:before {
+  background-image: url("../images/login-facebook-3e1626e3d5c7df61a277513295e7acb6cf9112c4df07db1b867c7641a7005492.png");
+}
+
+.socialplus_ec .button-container .btn-facebook:after {
+  border-color: #8298cc;
+}
+
+.socialplus_ec .button-container .btn-twitter {
+  background-color: #438dc4;
+}
+
+.socialplus_ec .button-container .btn-twitter:before {
+  background-image: url("../images/login-twitter-944a487f4746a5ce6557d56ae65421e8b71eaa7fda7a0f74a1bed6b86d345567.png");
+}
+
+.socialplus_ec .button-container .btn-twitter:after {
+  border-color: #88BEEF;
+}
+
+.socialplus_ec .button-container .btn-google {
+  background-color: #0056c7;
+}
+
+.socialplus_ec .button-container .btn-google:before {
+  background-image: url("../images/login-google-0119f2ac53e7fc66fe39b1e40fc4757c35ceab4bf28021ce0a81d45eee5d2360.png");
+}
+
+.socialplus_ec .button-container .btn-google:after {
+  border-color: #4285f4;
+}
+
+.socialplus_ec .button-container .btn-gplus {
+  background-color: #d04d40;
+}
+
+.socialplus_ec .button-container .btn-gplus:before {
+  background-image: url("../images/login-gplus-f2319e7179a28ad715384eb95ff7490c6ff1efa46a13c944022702b87ab4be07.png");
+}
+
+.socialplus_ec .button-container .btn-gplus:after {
+  border-color: #cf837a;
+}
+
+.socialplus_ec .button-container .btn-mixi {
+  background-color: #cba958;
+}
+
+.socialplus_ec .button-container .btn-mixi:before {
+  background-image: url("../images/login-mixi-99e3d6436ac6491642b1ed205a8f6ea2fbc7a349aea04474f1ae3477c27373f5.png");
+}
+
+.socialplus_ec .button-container .btn-mixi:after {
+  border-color: #e6bc5c;
+}
+
+.socialplus_ec .button-container .btn-yahoo {
+  background-color: #fe0032;
+  border: 0.5px solid #f00;
+}
+
+.socialplus_ec .button-container .btn-yahoo:before {
+  background-image: url("../images/login-yahoo-ecc9e51a9724b036b6fd228bdef4855731ad44ae44b75fe1f4af7eb0f59684de.png");
+}
+
+.socialplus_ec .button-container .btn-yahoo:after {
+  border-color: #fe0032;
+}
+
+.socialplus_ec .button-container .btn-rakuten {
+  background-color: #b21d23;
+}
+
+.socialplus_ec .button-container .btn-rakuten:before {
+  background-image: url("../images/login-rakuten-8e21ab472f9e803e6d89857d15dd46768e21dc685f03156cfd96205df6773a66.png");
+}
+
+.socialplus_ec .button-container .btn-rakuten:after {
+  border-color: #ae6164;
+}
+
+.socialplus_ec .button-container .btn-line {
+  background-color: #31ae36;
+}
+
+.socialplus_ec .button-container .btn-line:before {
+  background-image: url("../images/login-line-ed8c51d83aae2ebc670a6fdc20afa7dc93ab3205464e89d999349f49f53659c0.png");
+}
+
+.socialplus_ec .button-container .btn-line:after {
+  border-color: #70C053;
+}
+
+/* ecforce-payment */
+.ecforce-payment-card-number,
+.ecforce-payment-card-expiry,
+.ecforce-payment-card-cvv {
+  cursor: text !important;
+  font-size: 12px !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 3px !important;
+  width: 70% !important;
+}
+.ecforce-payment-card-number #card-number,
+.ecforce-payment-card-expiry #card-expiry,
+.ecforce-payment-card-cvv #card-cvv {
+  padding: 10px 10px !important;
+}
+
+.toggle_text {
+  display: none;
+}
+
+/* カスタム項目 */
+.free_columns-section_ec input {
+  width: 70%;
+}
+.free_columns-section_ec input[type=checkbox], .free_columns-section_ec input[type=radio] {
+  width: auto;
+  top: -2px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.free_columns-section_ec .checkbox-wrapper, .free_columns-section_ec .radio-wrapper {
+  margin-top:5px
+}
+.free_columns-section_ec .checkbox-wrapper>label, .free_columns-section_ec .radio-wrapper>label {
+  display: inline-block;
+  margin-left: 2px;
+  width: 93%;
+}
+.free_columns-section_ec .form_group_ec label {
+  font-weight: normal;
+}
+.free_columns-section_ec textarea {
+  width: 100%;
+}
+.free_columns-section_ec select {
+  width: 70%;
+}
+.free_columns-section_ec select[multiple]{
+  height: 100% !important;
+}
+.free_columns-section_ec .category-caption-wrapper {
+  margin: 1.5em 0 0.8em 3em;
+  padding: 1em 0em 1em 1em;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 5px solid #203594;
+  width: 852px;
+}
+.free_columns-section_ec .category-caption-text {
+  display: inline-block;
+  width: 90%;
+}
+.free_columns-section_ec tr.free_column_category-footer td{
+  border-left: none;
+  border-right: none;
+}
+.free_columns-section_ec .category-btn-wrapper {
+  cursor:pointer ;
+  font-size: 14px;
+  display:inline-block;
+  font-weight: bold;
+  color: #010FEE;
+  letter-spacing: 0.2em;
+}
+.free_columns-section_ec .category-btn-wrapper .category-btn:before {
+  display:inline-block;
+  margin-right: 0.4rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: #010FEE;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+.free_columns-section_ec .category-btn-wrapper.category-minus .category-btn:before {
+  content:'ー';
+  letter-spacing: 0;
+  line-height: 1.95rem;
+}
+.free_columns-section_ec .category-btn-wrapper.category-plus {
+  margin: 0.7em 0 0.8em 2em;
+  padding: 1em;
+}
+.free_columns-section_ec .category-btn-wrapper.category-plus .category-btn:before {
+  content:'＋';
+  letter-spacing: 0;
+  line-height: 1.95rem;
+  font-weight: bold;
+}
+
+/* セット商品 */
+.table_ec td.set_item_selected{
+  padding-left: 28px;
+}
+
+/*------------------------------------
+* スマートフォン部分
+*-------------------------------------*/
+.form_container_sp_ec {
+  padding: 0;
+  background-size: 100%;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.landing_form_label_sp_ec {
+  padding: 15px;
+}
+/* フォーム入力ボックスの基本 */
+.form_main_container_sp_ec div.form_group_sp_ec input{
+  padding: 8px 4px;
+  line-height: 2.4;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form_main_container_sp_ec div.form_group_sp_ec input[type=checkbox]{
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.form_main_container_sp_ec div.form_group_sp_ec select{
+  height: 50px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form_group_sp_ec {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  position: relative;
+}
+.form_main_container_sp_ec div.form_group_sp_ec .disabled-input-ec {
+  pointer-events: none;
+  color: #555;
+  background-color: #ccc !important;
+  border: 1px solid #cccccc;
+  opacity: 0.7;
+}
+/* フォームトップメッセージ */
+.login_message_sp_ec,
+.purchase_message_sp_ec {
+  font-weight: normal;
+  font-size: 14px;
+  padding:20px 0px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+/* エラーメッセージ背景 */
+.alert-danger_sp_ec {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.alert-success_sp_ec {
+  background-color: #DFF0D8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+
+.alert_sp_ec {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.form_main_container_sp_ec {
+  width: 100%;
+  border-radius:3px
+}
+span.form_required_sp_ec{
+  padding: 2px 4px;
+  margin-left: 5px;
+  display: inline-block;
+}
+/* フォームの項目名ラベル */
+.form_box_label_sp_ec {
+  padding: 2%;
+  vertical-align: middle;
+  text-align: left;
+  margin-bottom: 2%;
+}
+select.input_box_sp_ec {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+}
+input.input_box_sp_ec { width:98%; }
+select.input_box_product_sp_ec { width:98%; }
+select.input_box_quantity_sp_ec { width:98%; }
+input.input_box_name_sp_ec { width:98%; }
+input.input_box_name1_sp_ec { width:45%; }
+input.input_box_name2_sp_ec { width:45%; }
+input.input_box_kana_sp_ec { width:98%; }
+input.input_box_kana1_sp_ec { width:45%; }
+input.input_box_kana2_sp_ec { width:45%; }
+select.input_box_sex_sp_ec { width:98%; }
+select.input_box_job_sp_ec { width:98%; }
+select.input_box_birth_year_sp_ec { width: 40%; }
+select.input_box_birth_month_sp_ec { width: 25%; }
+select.input_box_birth_day_sp_ec { width: 25%; }
+input.input_box_zip1_sp_ec { width: 80px; }
+input.input_box_zip2_sp_ec { width: 100px; }
+select.input_box_pref_sp_ec { width:98%; }
+input.input_box_addr1_sp_ec { width:98%; }
+input.input_box_addr2_sp_ec { width:98%; }
+input.input_box_addr3_sp_ec { width:98%; }
+input.input_box_tel_sp_ec { width: 98%; }
+input.input_box_tel1_sp_ec { width: 24%; }
+input.input_box_tel2_sp_ec { width: 24%; }
+input.input_box_tel3_sp_ec { width: 24%; }
+input.input_box_fax_sp_ec { width: 98%; }
+input.input_box_fax1_sp_ec { width: 24%; }
+input.input_box_fax2_sp_ec { width: 24%; }
+input.input_box_fax3_sp_ec { width: 24%; }
+input.input_box_company_sp_ec { width: 98%; }
+input.input_box_email_sp_ec { width:98%; }
+input.input_box_email_confirm_sp_ec { width:98%; }
+input.input_box_customer_number_sp_ec { width:98%; }
+select.input_box_shipping_address_sp_ec { width:98%; }
+select.input_box_wrapping_sp_ec { width:98%; }
+select.input_box_card_method_sp_ec { width:98%; }
+select.input_box_card_times_sp_ec { width:98%; }
+input.input_box_card_number_sp_ec { width:98%; }
+select.input_box_card_month_sp_ec { width: 25%; }
+select.input_box_card_year_sp_ec { width: 25%; }
+input.input_box_card_name_sp_ec { width:98%; }
+select.input_box_container_payment_schedule_sp_ec { width:98%; }
+
+p.form_box_label_sp_ec strong { font-weight: bold; }
+p.form_box_label_sp_ec label { font-weight: bold; }
+div.form_group_sp_ec p {}
+div.form_group_sp_ec span { font-weight: bold; }
+p.caution_sp_ec {
+  padding-top:10px;
+  font-size: 14px;
+}
+p.product_name_sp_ec {
+  padding: 0 15px 0 15px;
+  font-size: 16px;
+}
+div.scheduled_delivery_date_text_sp_ec {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left:15px;
+  padding-right:15px;
+}
+.optin_view_sp_ec,
+.agreement_view_sp_ec,
+.order_checklist_view_sp_ec {
+  margin-left: 4%;
+  padding-top: 15px;
+  position: relative;
+}
+.submit_sp_ec {
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pre_ordered_delivery_description_text_sp_ec {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+/* カスタム項目 */
+.free_columns-section_sp_ec input {
+  width: 98%;
+}
+.free_columns-section_sp_ec input[type=checkbox], .free_columns-section_sp_ec input[type=radio] {
+  width: auto;
+  top: -1px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.free_columns-section_sp_ec .checkbox-wrapper, .free_columns-section_sp_ec .radio-wrapper {
+  margin-top:5px
+}
+.free_columns-section_sp_ec .checkbox-wrapper>label, .free_columns-section_sp_ec .radio-wrapper>label {
+  display: inline-block;
+  margin-left: 6px;
+  width: 90%;
+}
+.free_columns-section_sp_ec .form_group_ec label {
+  font-weight: normal;
+}
+.free_columns-section_sp_ec textarea {
+  width: 100%;
+}
+.free_columns-section_sp_ec select {
+  width: 98%;
+}
+.free_columns-section_sp_ec select[multiple]{
+  height: 100% !important;
+}
+.free_columns-section_sp_ec .category-caption-wrapper {
+  margin: 1em 0;
+  padding: 1em 0em 1em 1em;
+  font-size: 13px;
+  font-weight: bold;
+  border-left: 5px solid #203594;
+}
+.free_columns-section_sp_ec .category-caption-text {
+  display: inline-block;
+  width: 78%;
+}
+.free_columns-section_sp_ec tr.free_column_category-footer td{
+  border-left: none;
+  border-right: none;
+}
+.free_columns-section_sp_ec .category-btn-wrapper {
+  cursor:pointer ;
+  font-size: 14px;
+  display:inline-block;
+  font-weight: bold;
+  color: #010FEE;
+  letter-spacing: 0.2em;
+}
+.free_columns-section_sp_ec .category-btn-wrapper .category-btn:before {
+  display:inline-block;
+  margin-right: 0.4rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #010FEE;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+.free_columns-section_sp_ec .category-btn-wrapper.category-minus .category-btn:before {
+  content:'ー';
+  letter-spacing: 0;
+  line-height: 1.35rem;
+}
+.free_columns-section_sp_ec .category-btn-wrapper.category-plus {
+  padding: 1em;
+}
+.free_columns-section_sp_ec .category-btn-wrapper.category-plus .category-btn:before {
+  content:'＋';
+  letter-spacing: 0;
+  line-height: 1.35rem;
+  font-weight: bold;
+}
+
+/* セット商品 */
+.table_sp_ec td.set_item_selected{
+  padding-left: 28px;
+}
+
+/*------------------------------------
+* PCデザイン可変部分
+*-------------------------------------*/
+/* 【PC】フォームの項目名ラベル内必須アイコン */
+span.form_required_ec{
+  /* セクションラベルの色 */
+  background: #7E0F09;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+}
+/* 【PC】フォームのセクションラベル */
+.landing_form_label_ec {
+  /* セクションラベルの色 */
+  background: #203594;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+  /* セクションラベルのフォントサイズ */
+  font-size: 18px;
+}
+/* 【PC】フォーム入力ボックス内の基本デザイン */
+table.landing_form_ec {
+  border-top: 1px solid #d0dcec;
+  border-right: 1px solid #d0dcec;
+  background: #FFF;
+  border-bottom: 1px solid #999;
+}
+/* 【PC】フォーム左側　項目名ラベル */
+.landing_form_ec th {
+  background-color: #e1edfd;
+  border-bottom: 1px solid #d0dcec;
+  border-left: 1px solid #d0dcec;
+  background-color: #e1edfd;
+}
+/* 【PC】フォーム右側　入力ボックス */
+.landing_form_ec td {
+  border-bottom: 1px solid #d0dcec;
+  border-left: 1px solid #d0dcec;
+  background-color: #ffffff;
+}
+/* 【PC】購入ボタンのデザイン */
+.login_button_ec {
+  border: 0px;
+  width: 400px;
+  height: 150px;
+  background: url("../images/default_login_btn-3545ead6f7c1f581390be8bada934a229cd580f4f4830b21c14803de789ad249.png") center;
+  background-size: 394px auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/* 【PC】購入ボタンのデザイン */
+.submit_bottom_ec {
+  border: 0px;
+  width: 400px;
+  height: 150px;
+  background: url("../images/default_btn-f6c2a9bc1ad7a90718756cd965847d700d3750ab3c837bf74bcf30dd3d083ea0.png") center;
+  background-size: 394px auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/* 【PC】購入ボタンのデザイン */
+.submit_button_complete_ec {
+  border: 0px;
+  width: 400px;
+  height: 150px;
+  background: url("../images/default_order_comp-6baf1ae5951cb6ca295e07a256d9d8ce2e646d315125a11207f4d833c9cca5d3.png") center;
+  background-size: 394px auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/*------------------------------------
+* スマートフォンデザイン可変部分
+*-------------------------------------*/
+/* 【SP】フォームの項目名ラベル内必須アイコン */
+span.form_required_sp_ec{
+  /* セクションラベルの色 */
+  background: #7E0F09;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+}
+
+/* 【SP】フォームのセクションラベル */
+.landing_form_label_sp_ec {
+  /* セクションラベルの色 */
+  background: #203594;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+  /* セクションラベルのフォントサイズ */
+  font-size: 18px;
+}
+
+/* 【SP】フォームの項目名ラベル */
+.form_box_label_sp_ec {
+  background: #cadefc;
+  border-bottom: 1px solid #C3C3C3;
+  border-top: 1px solid #C3C3C3;
+}
+
+/* 【SP】ログインボタンのデザイン */
+.login_button_sp_ec {
+  border: 0px;
+  width: 100%;
+  height: 150px;
+  background: url("../images/default_login_btn-3545ead6f7c1f581390be8bada934a229cd580f4f4830b21c14803de789ad249.png") center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* 【SP】購入ボタンのデザイン */
+.submit_bottom_sp_ec {
+  border: 0px;
+  width: 100%;
+  height: 150px;
+  background: url("../images/default_btn-f6c2a9bc1ad7a90718756cd965847d700d3750ab3c837bf74bcf30dd3d083ea0.png") center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.submit_button_complete_sp_ec {
+  border: 0px;
+  width: 100%;
+  height: 150px;
+  background: url("../images/default_order_comp-6baf1ae5951cb6ca295e07a256d9d8ce2e646d315125a11207f4d833c9cca5d3.png") center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.preview_container_sp_ec > table {
+  width: 100%;
+}
+
+.preview_container_sp_ec > table th {
+  background: #cadefc;
+}
+
+.preview_container_sp_ec > table,
+.preview_container_sp_ec > table tr,
+.preview_container_sp_ec > table th,
+.preview_container_sp_ec > table td {
+  border: 1px solid #C3C3C3;
+}
+
+.table_bordered_sp_ec {
+  border: 0px !important;
+}
+
+.table_sp_ec {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table_sp_ec > thead > tr > th,
+.table_sp_ec > tbody > tr > th,
+.table_sp_ec > tfoot > tr > th,
+.table_sp_ec > thead > tr > td,
+.table_sp_ec > tbody > tr > td,
+.table_sp_ec > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.table_bordered_sp_ec > thead > tr > th,
+.table_bordered_sp_ec > tbody > tr > th,
+.table_bordered_sp_ec > tfoot > tr > th,
+.table_bordered_sp_ec > thead > tr > td,
+.table_bordered_sp_ec > tbody > tr > td,
+.table_bordered_sp_ec > tfoot > tr > td {
+  border: 1px solid #ddd;
+}
+
+.table_sp_ec tr > th {
+  border-top: 0px;
+  background: #F0F0F0;
+  font-size: 10px;
+}
+
+.table_sp_ec tr > th,
+.table_sp_ec tr > td {
+  font-size: 12px;
+}
+
+.table_bordered_sp_ec tr > th,
+.table_bordered_sp_ec tr > td {
+  border: 1px solid #e5e5e5 !important;
+}
+
+.table_sp_ec th,
+.table_sp_ec td {
+  vertical-align: middle !important;
+  line-height: 20px !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+.total_color_sp_ec {
+  color: #ff0000;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+/* Amazon Pay */
+.amazon_pay_box_sp_ec {
+  border: solid 3px #C3C3C3;
+  margin: 10px auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.amazon_pay_title_sp_ec {
+  margin: 0 auto 10px auto !important;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #df1800;
+  font-weight: bold;
+}
+
+.amazon_pay_subtitle_sp_ec {
+  margin: 0 auto 10px auto !important;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  color: #e6a300;
+}
+
+.amazon_pay_message_sp_ec {
+  margin: 0 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.amazon_pay_not_use_message_sp_ec {
+  margin: 0 10px !important;
+  padding: 0 0 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #e6a300;
+}
+
+.amazon_pay_button_all_sp_ec {
+  margin: 20px auto 20px;
+  width: 300px;
+}
+
+.amazon_pay_button_wallet_sp_ec {
+  padding-top: 15px;
+  margin-left: -15px;
+}
+
+.amazon_pay_button_wallet_sp_ec input.billing_agreement_sp_ec {
+  visibility: hidden;
+  font-size: 0px !important;
+}
+
+.address_book_widget_wrapper_sp_ec,
+.wallet_widget_wrapper_sp_ec,
+.consent_widget_wrapper_sp_ec {
+}
+
+.address_book_widget_wrapper_sp_ec,
+.wallet_widget_wrapper_sp_ec,
+.consent_widget_wrapper_sp_ec {
+}
+
+.consent_wrapper_sp_ec {
+  height: 30px;
+  color: white;
+  background: red;
+  padding-top: 5px;
+  margin: 10px 0;
+}
+
+.consent_wrapper_sp_ec > span.consent_message_sp_ec {
+  padding: 0 0 0 10px;
+}
+
+.consent_wrapper_sp_ec > span.consent_mandatory_sp_ec {
+  float: right;
+  background: white;
+  color: red;
+  padding: 2px 8px;
+  margin: 2px 10px;
+}
+
+.consent_wrapper_sp_ec > input.consent_checkbox_sp_ec {
+  visibility: hidden;
+}
+
+/* AmazonPay popup >> */
+.amazon_pay_popup_box_sp_ec {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+.amazon_pay_popup_content_sp_ec {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 250px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.amazon_pay_popup_title_sp_ec {
+  font-size: 20px;
+}
+
+.amazon_pay_popup_close_sp_ec {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  border-style: none;
+  cursor: pointer;
+}
+
+.amazon_pay_popup_subtitle_sp_ec {
+  margin: 40px 0 30px;
+  font-size: 15px;
+}
+
+.amazon_pay_popup_body_sp_ec {
+  margin: 20px auto 20px;
+  width: 300px;
+}
+/* << AmazonPay popup */
+
+.login_message_box_sp_ec {
+  width: 100%;
+  margin: 0 auto;
+  border: solid 1px #d0dcec;
+}
+
+p.login_message_wrapper_sp_ec {
+  font-size: 14px;
+  margin: 20px 0 !important;
+  text-align: center;
+}
+
+/* Socialplus */
+.socialplus_sp_ec {
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.socialplus_sp_ec .button-container {
+  width: 100%;
+  float: left;
+  padding: 10px 10px 0;
+  box-sizing: border-box;
+}
+
+.socialplus_sp_ec .button-container .button {
+  position: relative;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 50px;
+  padding-left: 20px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.socialplus_sp_ec .button-container .button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+}
+
+.socialplus_sp_ec .button-container .button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.socialplus_sp_ec .button-container .btn-facebook {
+  background-color: #4267b2;
+}
+
+.socialplus_sp_ec .button-container .btn-facebook:before {
+  background-image: url("../images/login-facebook-3e1626e3d5c7df61a277513295e7acb6cf9112c4df07db1b867c7641a7005492.png");
+}
+
+.socialplus_sp_ec .button-container .btn-facebook:after {
+  border-color: #8298cc;
+}
+
+.socialplus_sp_ec .button-container .btn-twitter {
+  background-color: #438dc4;
+}
+
+.socialplus_sp_ec .button-container .btn-twitter:before {
+  background-image: url("../images/login-twitter-944a487f4746a5ce6557d56ae65421e8b71eaa7fda7a0f74a1bed6b86d345567.png");
+}
+
+.socialplus_sp_ec .button-container .btn-twitter:after {
+  border-color: #88BEEF;
+}
+
+.socialplus_sp_ec .button-container .btn-google {
+  background-color: #0056c7;
+}
+
+.socialplus_sp_ec .button-container .btn-google:before {
+  background-image: url("../images/login-google-0119f2ac53e7fc66fe39b1e40fc4757c35ceab4bf28021ce0a81d45eee5d2360.png");
+}
+
+.socialplus_sp_ec .button-container .btn-google:after {
+  border-color: #4285f4;
+}
+
+.socialplus_sp_ec .button-container .btn-gplus {
+  background-color: #d04d40;
+}
+
+.socialplus_sp_ec .button-container .btn-gplus:before {
+  background-image: url("../images/login-gplus-f2319e7179a28ad715384eb95ff7490c6ff1efa46a13c944022702b87ab4be07.png");
+}
+
+.socialplus_sp_ec .button-container .btn-gplus:after {
+  border-color: #cf837a;
+}
+
+.socialplus_sp_ec .button-container .btn-mixi {
+  background-color: #cba958;
+}
+
+.socialplus_sp_ec .button-container .btn-mixi:before {
+  background-image: url("../images/login-mixi-99e3d6436ac6491642b1ed205a8f6ea2fbc7a349aea04474f1ae3477c27373f5.png");
+}
+
+.socialplus_sp_ec .button-container .btn-mixi:after {
+  border-color: #e6bc5c;
+}
+
+.socialplus_sp_ec .button-container .btn-yahoo {
+  background-color: #fe0032;
+  border: 0.5px solid #f00;
+}
+
+.socialplus_sp_ec .button-container .btn-yahoo:before {
+  background-image: url("../images/login-yahoo-ecc9e51a9724b036b6fd228bdef4855731ad44ae44b75fe1f4af7eb0f59684de.png");
+}
+
+.socialplus_sp_ec .button-container .btn-yahoo:after {
+  border-color: #fe0032;
+}
+
+.socialplus_sp_ec .button-container .btn-rakuten {
+  background-color: #b21d23;
+}
+
+.socialplus_sp_ec .button-container .btn-rakuten:before {
+  background-image: url("../images/login-rakuten-8e21ab472f9e803e6d89857d15dd46768e21dc685f03156cfd96205df6773a66.png");
+}
+
+.socialplus_sp_ec .button-container .btn-rakuten:after {
+  border-color: #ae6164;
+}
+
+.socialplus_sp_ec .button-container .btn-line {
+  background-color: #31ae36;
+}
+
+.socialplus_sp_ec .button-container .btn-line:before {
+  background-image: url("../images/login-line-ed8c51d83aae2ebc670a6fdc20afa7dc93ab3205464e89d999349f49f53659c0.png");
+}
+
+.socialplus_sp_ec .button-container .btn-line:after {
+  border-color: #70C053;
+}
+
+/* LINE ID 連携 */
+
+.line_ec {
+}
+
+.line_ec .button-container.w100 {
+  width: 100%;
+}
+
+.line_ec .button-container .button {
+  position: relative;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 50px;
+  padding-left: 30px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.line_ec .button-container .button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+}
+
+.line_ec .button-container .button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+@media screen and (min-width: 480px) {
+  .line_ec {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .line_ec .button-container {
+    width: calc(33.3% - 10px);
+    margin: 5px;
+  }
+
+  .line_ec .button-container .button {
+    line-height: 40px;
+    padding-left: 40px;
+    height: 40px;
+  }
+
+  .line_ec .button-container .button:before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .line_ec .button-container .button:after {
+    width: 40px;
+  }
+}
+
+.line_ec .button-container .btn-line {
+  background-color: #31ae36;
+}
+
+.line_ec .button-container .btn-line:before {
+  background-image: image_url('login-line.png');
+}
+
+.line_ec .button-container .btn-line:after {
+  border-color: #70C053;
+}
+
+.line_ec .button-container .btn-line:before {
+  background-image: url("../images/login-line-ed8c51d83aae2ebc670a6fdc20afa7dc93ab3205464e89d999349f49f53659c0.png");
+}
+
+.line_sp_ec {
+}
+
+.line_sp_ec .button-container.w100 {
+  width: 100%;
+}
+
+.line_sp_ec .button-container .button {
+  position: relative;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 50px;
+  padding-left: 30px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.line_sp_ec .button-container .button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+}
+
+.line_sp_ec .button-container .button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.line_sp_ec .button-container .btn-line:before {
+  background-image: url("../images/login-line-ed8c51d83aae2ebc670a6fdc20afa7dc93ab3205464e89d999349f49f53659c0.png");
+}
+
+.form_container_sp_ec .line_alert_sp_ec {
+  font-size: 12px;
+  padding: 0px;
+}
+
+.line_alert_sp_ec {
+  margin: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .line_sp_ec {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .line_sp_ec .button-container {
+    width: calc(33.3% - 10px);
+    margin: 5px;
+  }
+
+  .line_sp_ec .button-container .button {
+    line-height: 40px;
+    padding-left: 40px;
+    height: 40px;
+  }
+
+  .line_sp_ec .button-container .button:before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .line_sp_ec .button-container .button:after {
+    width: 40px;
+  }
+}
+
+.line_sp_ec .button-container .btn-line {
+  background-color: #31ae36;
+}
+
+.line_sp_ec .button-container .btn-line:before {
+  background-image: image_url('login-line.png');
+}
+
+.line_sp_ec .button-container .btn-line:after {
+  border-color: #70C053;
+  margin: 10px;
+  width: 95%;
+}
+
+#popup_required_field_check.pc {
+  z-index: 99999;
+  width: 275px !important;
+  float: right;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  display: none;
+}
+
+#popup_required_field_check.sp {
+  z-index: 99999;
+  width: 100% !important;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  top: 0;
+  display: none;
+  text-align: center;
+}
+
+#popup_required_field_check.required_field_exists {
+  background: rgba(242, 133, 12, 0.8);
+}
+
+#popup_required_field_check.required_field_not_exists {
+  background: rgba(4, 162, 34, 0.8)
+}
+
+.input_required_ec {
+  background-color: rgba(242, 133, 12, 0.2) !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+
+/*-------------------------------------*
+ * PCデザイン可変部分
+ *-------------------------------------*/
+/* 【PC】フォームの項目名ラベル内必須アイコン */
+span.form_required_ec{
+  /* セクションラベルの色 */
+  background: #7E0F09;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+}
+/* 【PC】フォームのセクションラベル */
+.landing_form_label_ec {
+  /* セクションラベルの色 */
+  background: #203594;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+  /* セクションラベルのフォントサイズ */
+  font-size: 18px;
+}
+/* 【PC】フォーム入力ボックス内の基本デザイン */
+table.landing_form_ec {
+  border-top: 1px solid #d0dcec;
+  border-right: 1px solid #d0dcec;
+  background: #FFF;
+  border-bottom: 1px solid #999;
+}
+/* 【PC】フォーム左側　項目名ラベル */
+.landing_form_ec th {
+  background-color: #e1edfd;
+  border-bottom: 1px solid #d0dcec;
+  border-left: 1px solid #d0dcec;
+  background-color: #e1edfd;
+}
+/* 【PC】フォーム右側　入力ボックス */
+.landing_form_ec td {
+  border-bottom: 1px solid #d0dcec;
+  border-left: 1px solid #d0dcec;
+  background-color: #ffffff;
+}
+
+/* 【PC】購入ボタンのデザイン */
+.submit_bottom_ec {
+  border: 0px;
+  width: 400px;
+  height: 150px;
+  background-size: 394px auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/*-------------------------------------*
+ * スマートフォンデザイン可変部分
+ *-------------------------------------*/
+/* 【SP】フォームの項目名ラベル内必須アイコン */
+span.form_required_sp_ec{
+  /* セクションラベルの色 */
+  background: #7E0F09;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+}
+
+/* 【SP】フォームのセクションラベル */
+.landing_form_label_sp_ec {
+  /* セクションラベルの色 */
+  background: #203594;
+  /* セクションラベルのフォント色*/
+  color: #ffffff;
+  /* セクションラベルのフォントサイズ */
+  font-size: 18px;
+}
+
+/* 【SP】フォームの項目名ラベル */
+.form_box_label_sp_ec {
+  background: #cadefc;
+  border-bottom: 1px solid #C3C3C3;
+  border-top: 1px solid #C3C3C3;
+}
+
+/* 【SP】購入ボタンのデザイン */
+.submit_bottom_sp_ec {
+  border: 0px;
+  width: 100%;
+  height: 150px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
