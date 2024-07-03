@@ -1,7 +1,7 @@
 const URL_CF = "https://d2jtrui7bbhww8.cloudfront.net";
 const URL_CF_VIDEO = `${URL_CF}/upload-video`;
 const URL_GENERATOR_TOKEN = `${URL_CF}/generate-token`;
-var token = "";
+var rocketPageToken = "";
 const currentDomain = removeProtocol(window.location.origin);
 
 function fetchToken() {
@@ -9,8 +9,8 @@ function fetchToken() {
     fetch(`${URL_GENERATOR_TOKEN}/${currentDomain}`)
       .then((response) => response.json())
       .then((data) => {
-        token = data.data;
-        resolve(token);
+        rocketPageToken = data.data;
+        resolve(rocketPageToken);
       })
       .catch((error) => {
         console.error("Error fetching token:", error);
@@ -26,21 +26,27 @@ function removeProtocol(url) {
 function getNewUrlReplace(originalUrl) {
   const fullUrl = new URL(originalUrl, window.location.href).href;
   let domainImgUrlEncode = window.btoa(fullUrl);
-  return `${URL_CF}/${currentDomain}/${domainImgUrlEncode}?token=${token}`;
+  if (domainImgUrlEncode.length > 1024) {
+    return;
+  }
+
+  return `${URL_CF}/${currentDomain}/${domainImgUrlEncode}?token=${rocketPageToken}`;
 }
 
 async function getNewUrlReplaceVideo(originalUrl) {
   const currentDomain = removeProtocol(window.location.origin);
   const fullUrl = new URL(originalUrl, window.location.href).href;
   const domainVideoUrl = window.btoa(fullUrl);
+  if (domainVideoUrl.length > 1024) {
+    return;
+  }
 
   try {
-    const url = `${URL_CF_VIDEO}/${currentDomain}/${domainVideoUrl}?token=${token}`;
+    const url = `${URL_CF_VIDEO}/${currentDomain}/${domainVideoUrl}?token=${rocketPageToken}`;
     const response = await fetch(url);
     const data = await response.json();
-
     const urlValue = Object.values(data.data)[0] || null;
-    return urlValue ? urlValue + `?token=${token}` : null;
+    return urlValue ? urlValue + `?token=${rocketPageToken}` : null;
   } catch (error) {
     console.error("Error fetching token:", error);
     throw error; // Re-throw the error after logging it
@@ -110,11 +116,7 @@ function processCssRule(rule, baseSheetUrl) {
       if (urlValue && urlValue.includes("url(")) {
         const urlRegex = /url\(["']?(.*?)["']?\)/g;
         const updatedCssString = urlValue.replace(urlRegex, (match, url) => {
-          if (
-            shouldSkipUrl(url) ||
-            isDataBase64(url) ||
-            url.includes(URL_CF)
-          ) {
+          if (shouldSkipUrl(url) || isDataBase64(url) || url.includes(URL_CF)) {
             return match;
           }
           const urlOrigin = getOrigin(url, baseSheetUrl);
@@ -230,7 +232,6 @@ function processAllVideos() {
           const urlSource = source.getAttribute("src");
           if (urlSource) {
             const urlReplace = await getNewUrlReplaceVideo(urlSource);
-            console.log("urlReplace", urlReplace);
 
             urlReplace
               ? replaceVideoSrcSource(source, urlReplace)
@@ -275,10 +276,10 @@ const replaceVideoSrcSource = (source, videoReplace, attr = "") => {
 };
 fetchToken()
   .then((fetchedToken) => {
-    // if (!fetchedToken) {
-    //   console.log("Token is not available, processing will not run.");
-    //   return;
-    // }
+    if (!fetchedToken) {
+      console.log("Token is not available, processing will not run.");
+      return;
+    }
     return Promise.all([processAllImages(), processAllVideos()]);
   })
   .then(([imageResults, videoPaths]) => {
