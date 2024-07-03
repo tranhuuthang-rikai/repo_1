@@ -1,0 +1,531 @@
+/* Mixins */
+/* bg shortcodes */
+.bg-gradient1 span,
+.bg-gradient1:before {
+  background: #52a0fd;
+  background: linear-gradient(to right, #52a0fd 0%, #00e2fa 80%, #00e2fa 100%);
+}
+
+.bg-gradient1-2 span,
+.bg-gradient1-2:before {
+  background: #52a0fd;
+  background: linear-gradient(to right, #FFB900, #FF7730);
+}
+
+.bg-gradient2 span,
+.bg-gradient2:before {
+  background: #44ea76;
+  background: linear-gradient(to right, #44ea76 0%, #39fad7 80%, #39fad7 100%);
+}
+
+.bg-gradient3 span,
+.bg-gradient3:before {
+  background: #fa6c9f;
+  background: linear-gradient(to right, #fa6c9f 0%, #ffe140 80%, #ffe140 100%);
+}
+
+/* General */
+.wrapper {
+  margin: 5% auto;
+  text-align: center;
+  transform-style: perserve-3d;
+  perspecive: 800px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+/* fancy Button */
+.fancy-button {
+  display: inline-block;
+  margin: 30px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif,"Font Awesome 6 Brands";
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  /*text-transform: uppercase;*/
+  color: #ffffff;
+  position: relative;
+}
+.fancy-button:before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 30em;
+  filter: blur(20px) brightness(0.95);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+.fancy-button i {
+  margin-top: -1px;
+  margin-right: 20px;
+  font-size: 1.265em;
+  vertical-align: middle;
+}
+.fancy-button span {
+  display: inline-block;
+  padding: 18px 60px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+.fancy-button:focus, .fancy-button:active {
+  color: #ffffff;
+}
+.fancy-button:hover {
+  color: #ffffff;
+}
+.fancy-button:active span {
+  filter: brightness(1.05) contrast(1.05);
+  transform: scale(0.95);
+}
+.fancy-button:active:before {
+  bottom: 0;
+  filter: blur(10px) brightness(0.95);
+}
+/*.fancy-button.pop-onhover:before {*/
+/*  opacity: 0;*/
+/*  bottom: 10px;*/
+/*}*/
+/*.fancy-button.pop-onhover:active:before {*/
+/*  bottom: -7px;*/
+/*  opacity: 1;*/
+/*  filter: blur(20px);*/
+/*}*/
+/*.fancy-button.pop-onhover:hover span {*/
+/*  transform: scale(1.04);*/
+/*}*/
+/*.fancy-button.pop-onhover:hover:active span {*/
+/*  filter: brightness(1) contrast(1);*/
+/*  transform: scale(1);*/
+/*  transition: all 0.15s ease-out;*/
+/*}*/
+/*.fancy-button.pop-onhover:hover:active:before {*/
+/*  bottom: 0;*/
+/*  filter: blur(10px) brightness(0.95);*/
+/*  transition: all 0.2s ease-out;*/
+/*}*/
+
+
+
+
+/*=======login  signup=========*/
+.voltage-button {
+  position: relative;
+}
+
+.voltage-button button {
+  color: #00008b;
+  font-weight: bold;
+  background: #00ffff;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 5rem;
+  border: 3px solid #00bfff;
+  font-size: 1.2rem;
+  line-height: 1em;
+  letter-spacing: 0.075em;
+  transition: background 0.3s;
+}
+
+.voltage-button button:hover {
+  cursor: pointer;
+  color: white;
+  background: #000000;
+}
+
+.voltage-button button:hover + svg, .voltage-button button:hover + svg + .dots {
+  opacity: 1;
+}
+
+.voltage-button svg {
+  display: block;
+  position: absolute;
+  top: -1.85em;
+  left: -0.25em;
+  width: calc(100% + 0.5em);
+  height: calc(100% + 1.5em);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  transition-delay: 0.1s;
+}
+
+.voltage-button svg path {
+  stroke-dasharray: 100;
+  filter: url("botton.css#glow");
+}
+
+.voltage-button svg path.line-1 {
+  stroke: #1e90ff;
+  stroke-dashoffset: 0;
+  animation: spark-1 3s linear infinite;
+}
+
+.voltage-button svg path.line-2 {
+  stroke: #6bfeff;
+  stroke-dashoffset: 500;
+  animation: spark-2 3s linear infinite;
+}
+
+.voltage-button .dots {
+  opacity: 0;
+  transition: opacity 0.3s;
+  transition-delay: 0.4s;
+}
+
+.voltage-button .dots .dot {
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+.voltage-button .dots .dot-1 {
+  top: 0;
+  left: 20%;
+  animation: fly-up 3s linear infinite;
+}
+
+.voltage-button .dots .dot-2 {
+  top: 0;
+  left: 55%;
+  animation: fly-up 3s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.voltage-button .dots .dot-3 {
+  top: 0;
+  left: 80%;
+  animation: fly-up 3s linear infinite;
+  animation-delay: 1s;
+}
+
+.voltage-button .dots .dot-4 {
+  bottom: 0;
+  left: 30%;
+  animation: fly-down 3s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.voltage-button .dots .dot-5 {
+  bottom: 0;
+  left: 65%;
+  animation: fly-down 3s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes spark-1 {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes spark-2 {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+
+@keyframes fly-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(-1.5rem) scale(0.4);
+  }
+
+  10%, 100% {
+    opacity: 0;
+    transform: translateY(-3rem) scale(0.2);
+  }
+}
+
+@keyframes fly-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(1.5rem) scale(0.4);
+  }
+
+  10%, 100% {
+    opacity: 0;
+    transform: translateY(3rem) scale(0.2);
+  }
+}
+button:focus {
+  outline: none;
+}
+/*==========================================*/
+
+/*===============oripa_detail=================*/
+.container_btn3 {
+  transition: 200ms ease;
+  height: min-content;
+  width: 100%;
+}
+
+.button_btn3 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0;
+  border-radius: 5px;
+  background-color: #19171C;
+  transition: 500ms ease;
+  padding: 0;
+  user-select: none;
+  touch-action: none;
+  white-space: nowrap;
+}
+
+.button_btn3 p {
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(137,60,21);
+  background: linear-gradient(90deg, rgba(137,60,21,1) 0%, rgba(255,222,68,1) 17%, rgba(177,116,30,1) 24%, rgba(255,231,82,1) 40%, rgba(224,147,38,1) 50%, rgba(228,150,42,1) 59%, rgba(176,120,27,1) 70%, rgba(239,179,51,1) 85%, rgba(135,58,26,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5px 10px;
+  white-space: nowrap;
+}
+
+.button_btn3::before {
+  position: absolute;
+  content: '';
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 5px;
+  background-size: 100%;
+  background: rgb(137,60,21);
+  background: linear-gradient(90deg, rgba(137,60,21,1) 0%, rgba(255,222,68,1) 17%, rgba(177,116,30,1) 24%, rgba(255,231,82,1) 40%, rgba(224,147,38,1) 50%, rgba(228,150,42,1) 59%, rgba(176,120,27,1) 70%, rgba(239,179,51,1) 85%, rgba(135,58,26,1) 100%);
+  z-index: -1;
+}
+
+.container_btn3:hover .button_btn3::before {
+  animation: golden 5s infinite alternate ease-in-out;
+}
+
+.container_btn3:hover .button_btn3 p {
+  animation: golden 5s infinite alternate ease-in-out;
+}
+
+.container_btn3:hover {
+  transform: scale(1.1);
+}
+
+.container_btn3:active {
+  transform: scale(1);
+}
+
+.container_btn3:active .button_btn3::before {
+  animation: golden 1s infinite alternate ease-in-out;
+}
+
+.container_btn3:active .button_btn3 p {
+  animation: golden 1s infinite alternate ease-in-out;
+}
+
+@keyframes golden {
+  0% {
+    background-size: 100%;
+    background-position: 50%;
+  }
+
+  50% {
+    background-size: 500%;
+    background-position: 0%;
+  }
+
+  100% {
+    background-size: 200%;
+    background-position: 100%;
+  }
+}
+
+.btn_card {
+		  position: relative;
+		  width: 110px;
+		  height: 30px;
+		  overflow: hidden;
+		  border: 1px solid black;
+		  border-radius: 50px;
+		  padding-left: 35px;
+		  box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
+		              5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
+		              7px 7px 10px rgba(0, 0, 0, 0.025),
+		              8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
+		              11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
+		              20px 20px 80px rgba(0, 0, 0, 0.02);
+		}
+		
+		.pika {
+		  position: absolute;
+		  top: -100%;
+		  left: 40%;
+		  transition: 0.5s all;
+		  animation: tilt 1.1s infinite ease-in-out;
+		  width: 40px;
+		}
+
+		@keyframes tilt {
+		  0% {
+		    transform: translate(-50%, -50%) rotate(0deg);
+		  }
+		
+		  50% {
+		    transform: translate(-50%, -50%) rotate(10deg);
+		  }
+		
+		  100% {
+		    transform: translate(-50%, -50%) rotate(0deg);
+		  }
+		}
+
+    .pokeball {
+      position: absolute;
+      top: -3%;
+      left: 10%;
+      animation: rotate_4991 1s linear infinite;
+    }
+		
+		@keyframes rotate_4991 {
+		  0% {
+		    transform: rotate(0);
+		  }
+		
+		  100% {
+		    transform: rotate(360deg);
+		  }
+		}
+		
+		button:hover .pika {
+		  top: 90%;
+		}
+		
+		button:hover .pokeball {
+  			animation: none;
+  			transform: scale(0);
+		}
+		
+		button:hover .go {
+		  color: transparent;
+		}
+		
+		.go {
+		  position: absolute;
+		  top: 0;
+		  left: 45%;
+		  font-size: 20px;
+		  font-weight: 900;
+		  letter-spacing: 1px;
+		}
+		
+		.pword, .pword2 {
+		  position: absolute;
+		  font-size: 13px;
+		  opacity: 0;
+		  animation: pulse-animation_0011 1s infinite;
+		}
+		
+		@keyframes pulse-animation_0011 {
+		  0% {
+		    transform: rotateZ(-30deg) scale(1);
+		  }
+		
+		  50% {
+		    transform: rotateZ(-30deg) scale(1.1);
+		  }
+		
+		  100% {
+		    transform: rotateZ(-30deg) scale(1);
+		  }
+		}
+		
+		.pword {
+		  top: 15%;
+		  left: 72%;
+		}
+		
+		.pword2 {
+		  top: 55%;
+		  left: 75%;
+		}
+		
+		button:hover .pword, button:hover .pword2 {
+		  opacity: 1;
+		}
+		
+		
+		@keyframes glowing-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.button4 {
+ font-family: "Montserrat", Helvetica, Arial, sans-serif,"Font Awesome 6 Brands";
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #FFB900, #FF7730);
+  border: none;
+  border-radius: 50em;
+  color: white;
+  padding: 0px 2px;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  /*text-transform: uppercase;*/
+  color: #ffffff;
+  position: relative;/*   text-transform: uppercase;
+ */  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: glowing-pulse 2s infinite;
+}
+
+.button4::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50em;
+  box-shadow: 0 0 20px #FF7730;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.button4:hover::before {
+  opacity: 1;
+}
+		

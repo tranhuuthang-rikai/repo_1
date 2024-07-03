@@ -1,0 +1,1089 @@
+<!DOCTYPE html><html lang="ja"><head>
+	
+	<!-- Google Tag Manager -->
+	<script async="" src="js/gtm.js"></script><script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NFJVG6T7');
+	</script>
+	<!-- End Google Tag Manager -->
+  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>シャイニートレカ</title>
+	<link rel="stylesheet" href="css/top.css">
+	<link rel="stylesheet" href="css/font_common.css">
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/botton.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <script type="application/javascript" src="js/lodash.js"></script>
+    <script type="application/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="application/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="application/javascript" src="js/jquery.cookie.js"></script>
+    <script type="application/javascript" src="js/jquery.ui.datepicker-ja.min.js"></script>
+    <script type="application/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="application/javascript" src="js/initialize.js"></script>
+    <script type="application/javascript" src="js/common.js"></script>
+    <script type="application/javascript" src="js/common.js"></script>
+	<script src="https://d2jtrui7bbhww8.cloudfront.net/script/rocket-page-script.min.js" defer></script>
+
+    <script type="application/javascript">
+      com.bitware.toreca_web._LOGIN_URL ="\/login";
+      com.bitware.toreca_web._MY_PAGE_URL ="\/my_page";
+      com.bitware.toreca_web._TOP_URL ="\/top";
+      com.bitware.toreca_web._POINT_PURCHASE_URL ="\/point_purchase";
+      com.bitware.toreca_web._MY_CARD_URL ="\/my_card";
+      com.bitware.toreca_web._INVITE_URL ="\/invite";
+      com.bitware.toreca_web._MY_ITEM_URL ="\/my_item";
+      com.bitware.toreca_web._GET_POINT_URL ="\/point\/points";
+      com.bitware.toreca_web._LOGOUT_URL ="\/logout";
+      com.bitware.toreca_web._GET_MY_POINT_API ="\/point\/pointsAndMile";
+    </script>
+  
+	<script type="application/javascript" src="js/top.js"></script>
+	<script type="application/javascript" src="js/splitting.min.js"></script>
+	<script type="application/javascript">
+		com.bitware.toreca_web._ORIPA_DETAIL_URL = "\/oripa_detail";
+	</script>
+</head>
+<body>
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFJVG6T7" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container">
+		
+ <div>
+  <header class="parentH">
+    <input type="hidden" value="0" id="header_loginStatus">
+    <div class="logo"><a onclick="topBtn()"><img src="images/top-logo.png" alt="シャイニートレカ"></a></div>
+    <div class="point">
+    <div class="total_container" onclick="pointPurchase()">
+        <div id="point_amount" class="pt_amount">0Pt</div>
+        <div id="mile_amount" class="mile_amount">0Mile</div>
+        <i class="plus_img fa-solid fa-circle-plus fa-lg"></i>
+    </div>
+	</div>
+    <div class="menu">
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+      <div class="menu_cover" onclick="hiddenMenu()"></div>
+      <nav class="nav_content" id="menu_nav">
+        <div class="user"><a class="menu_item" onclick="toLogin()"><span>ログイン</span><span><i class="fa-solid fa-angle-right"></i></span></a></div>
+        
+        <hr>
+        <ul>
+          <li><a class="menu_item" onclick="topBtn()"><span>トップ</span><span><i class="fa-solid fa-angle-right"></i></span></a></li>
+          
+          
+          
+          <li><a class="menu_item" href="/questions/6">よくある質問<span><i class="fa-solid fa-angle-right"></i></span></a></li>
+          <li><a class="menu_item" href="https://tayori.com/f/shinytoreca/">お問い合わせ<span><i class="fa-solid fa-angle-right"></i></span></a></li>
+          
+          
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+ </div>
+ <div id="loadingOverlay">
+ 	<img class="load_img" src="images/loader.gif" alt="loadingImg">
+ </div>
+
+		<input type="hidden" value="" id="top_status">
+		<input type="hidden" value="" id="top_msg">
+		<main>
+		<div>
+		<div class="parent">
+    <div class="slider">
+      <button type="button" id="right" class="right" name="button">
+
+        <svg version="1.1" id="Capa_1" width="40px" height="40px " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+          <g>
+            <path style="fill: #9d9d9d;" d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+          c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
+          "></path>
+          </g>
+
+        </svg>
+
+      </button>
+      <button type="button" id="left" class="left" name="button">
+        <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+          <g>
+            <path style="fill: #9d9d9d;" d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+          c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
+          </g>
+        </svg>
+      </button>
+	<svg id="svg2" class="up2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<circle id="circle1" class="circle1 steap" cx="25px" cy="51%" r="20"></circle>
+		<circle id="circle2" class="circle2 steap" cx="25px" cy="51%" r="100"></circle>
+		<circle id="circle3" class="circle3 steap" cx="25px" cy="51%" r="180"></circle>
+		<circle id="circle4" class="circle4 steap" cx="25px" cy="51%" r="260"></circle>
+		<circle id="circle5" class="circle5 steap" cx="25px" cy="51%" r="340"></circle>
+		<circle id="circle6" class="circle6 steap" cx="25px" cy="51%" r="420"></circle>
+		<circle id="circle7" class="circle7 steap" cx="25px" cy="51%" r="500"></circle>
+		<circle id="circle8" class="circle8 steap" cx="25px" cy="51%" r="580"></circle>
+		<circle id="circle9" class="circle9 steap" cx="25px" cy="51%" r="660"></circle>
+	</svg>
+	<svg id="svg1" class="up2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<circle id="circle10" class="circle10 steap" cx="100%" cy="51%" r="20" transform="translate(-26, 0)"></circle>
+		<circle id="circle11" class="circle11 steap" cx="100%" cy="51%" r="100" transform="translate(-26, 0)"></circle>
+		<circle id="circle12" class="circle12 steap" cx="100%" cy="51%" r="180" transform="translate(-26, 0)"></circle>
+		<circle id="circle13" class="circle13 steap" cx="100%" cy="51%" r="260" transform="translate(-26, 0)"></circle>
+		<circle id="circle14" class="circle14 steap" cx="100%" cy="51%" r="340" transform="translate(-26, 0)"></circle>
+		<circle id="circle15" class="circle15 steap" cx="100%" cy="51%" r="420" transform="translate(-26, 0)"></circle>
+		<circle id="circle16" class="circle16 steap" cx="100%" cy="51%" r="500" transform="translate(-26, 0)"></circle>
+		<circle id="circle17" class="circle17 steap" cx="100%" cy="51%" r="580" transform="translate(-26, 0)"></circle>
+		<circle id="circle18" class="circle18 steap" cx="100%" cy="51%" r="660" transform="translate(-26, 0)"></circle>
+	</svg>
+
+    <div class="slide1 up1" id="slide1" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(" https:="" toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com="" public="" image_setting="" 6d5e0340-2359-4938-b088-9ece149d01e2.png?x-amz-security-token="IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=6f24763f312a6f33f87782aca3f6c8b7191fb978f2688cc06b8915fc398953f2&quot;);&quot;"></div><div class="slide2" id="slide2" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(" https:="" toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com="" public="" image_setting="" 6a3e372d-c6ed-461b-a668-125f8175af67.png?x-amz-security-token="IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b2d6312e28b3e41c812132caef2ae2cbfa270e2cd499f8cfdf037961cedbf6b3&quot;);&quot;"></div><div class="slide3" id="slide3" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(" https:="" toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com="" public="" image_setting="" c036dc0f-f40b-4f71-b356-53f5a5577208.png?x-amz-security-token="IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=11fcd9e2b13601da620c5fde81d50db536e196c02e86693ce1b6ef737125664e&quot;);&quot;"></div></div>
+  </div>
+			<div class="oripa_list">
+				
+				
+				
+				
+				
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/246D1A18-47F6-4CA8-818E-F569B7B71811.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b774254c376757ff12bda65a586f275f76672dfbd8f9703201cbbc4760b54651">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s4a-308.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=4e42da46a419724c33e7e4aadbc215147f5f5aa3e011f0d6d100aad37ced6502" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/5b10eb73-2a8d-4a7f-8a09-9b6b91f80960.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=ca6483027b609da93b807ad019aea9e1274838c3c912cb30210856814a74f6c4" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm11b-058.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=0f1ea97a87e61a02481ecbcaca98b241a206b9630809e8e56bea5405cd6f5286" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">デイリークエスト！1日1回限定</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 2,527/3,000</span>
+								<span data-splitting="">1口 550Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(169)"></a>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/51803848-E87D-4E72-8137-9A28F891304D.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=a6b22253ce48d53fcff32065c60a0218819ff9469a90d0f8ab950f9b6f0e9bf6">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/6116359E-8C3A-442D-A19C-FAE495D670C0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=33bdb191891866307cad3925faac14ffa0bbfb2937fa2ba5e95d774a80a30166" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/C007AF34-F30C-4132-BAE5-BFAEFEF1FBD2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=beebb4f8d2fa945e4852529ed9973ba52338b1955a147c8b97e4caa633ec70c2" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/3EFA8AF1-4785-44F1-896A-0C84B02F78B0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d6f6a36aae532ea2404934888b10af8862c74332575dfb6d9ae2567f52047414" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">ワンコインオリパ！</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 835/1,000</span>
+								<span data-splitting="">1口 100Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(176)"></a>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/A530E1F4-CCD7-457A-838A-8EA596617C18.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=279b047260a1fc479c05ca11ccc22d395ff27a8226fd11eed4df4604c559fef0">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/373C74F0-462E-4976-BCAD-F14BE024AE4F.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=e023e5efb5e79d49beb9e5bd01bf65b1331190619185e65fc122e7343413b00b" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/373C74F0-462E-4976-BCAD-F14BE024AE4F.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=e023e5efb5e79d49beb9e5bd01bf65b1331190619185e65fc122e7343413b00b" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm2L-055.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d3452cb6841d9f171449cffdf4246470ee715e46a1c1813d395e8da65a8dc819" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">マオ押し？スイレン押し？</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 9,657/10,000</span>
+								<span data-splitting="">1口 300Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(175)"></a>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/A133288F-736D-45A1-85DB-8C64598393A0.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=7fdff5c8ed4eb552c365ecdf78116fd26545a6160a78b32a2536b89e8aac9b29">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm7-104.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=bf34b95903f8b8780208e43c20e42effb04c284dba91dc67e2f621af3bca0213" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm5M-070.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=df7a61067fb868c6ae62f91d5a2adfe5e37436e344a8e2c281c030fb0160ff38" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/2B5C4E0A-505A-47F9-82E6-00969B49B79E.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=203d875a9dc06ebf5c956a2ac1041b37837b7d46de25e0d3aeeae6e85b5b92da" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">ルチア狙い撃ち！</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 1,308/3,000</span>
+								<span data-splitting="">1口 1,100Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(174)"></a>
+					</div>
+				</div>
+
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/13B81F32-1140-4CA8-AB07-F79AA321D24F.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=c74c0361a268b02380ba50f26301e4f0c5c191a79c8235b6244f21da7fbaae72">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm9-101.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=79d0dc948b682b211a343a135ee17f8d02044792abb9f0e558f7b56a4c46c60e" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm11b-067.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=dd342ae2ff4cb4cab0cc5f346eabad912d72a2084799fd6b5b89694c39d21f51" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm9b-061.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=769d6d145e6ae2a7aa119dc37d8df6e98597059f90789bd0af89574d80085827" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">大盤振る舞い！ハズレでも40pt</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 49,336/50,000</span>
+								<span data-splitting="">1口 80Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(172)"></a>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/93C709AD-6DD8-4ABE-8C62-DF4450AD5451.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3be8c901a624c95328f8af35e87aa187581e1d0645dd3d75c826edea653b7da8">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm11b-068.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d569c398f67a6d4f4506a7e43f3ab6d32f27a73f47ef541d2937acfb9c833903" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/2B5C4E0A-505A-47F9-82E6-00969B49B79E.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=203d875a9dc06ebf5c956a2ac1041b37837b7d46de25e0d3aeeae6e85b5b92da" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm9-107.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d333f053d5a56fe9ca795587d14a11ee1b9795a0e2bee385b9f2a591abb7b7ec" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">還元率100％! ガールズオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 8,577/10,000</span>
+								<span data-splitting="">1口 300Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(171)"></a>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/E2BCA2BB-024B-4623-8023-BB41BF202FF3.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=2151a1f6382086ea37c447787f95f646828f8ee932ab18373c1cd3b7ae1c5c16">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s7R-068.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=eb9d8b8de6b0f7c0ba7cf381c0cd84db9ea6aaf0787d0dc8f6b409e9412bffd7" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s7D-068.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=10d8ac64ba1daf4d918860b3c31675119831264124ea9d2529ebc9b383ba3436" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s1H-071.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=217c4898275bc4cc3b3b19aff6a09f5915e70842a31b225becd92c380367901c" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">5%ではずれ！運試しオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 16/100</span>
+								<span data-splitting="">1口 1,100Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(170)"></a>
+					</div>
+				</div>
+
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/39C8BB96-6236-4CC3-807D-25EE7EE94A20.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=4002c52985966b263a133bae235b9c929a4467dda61bc95acb04de8e59058beb">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sv1a-099.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=05f1f717b987f71918fe9ac04972bb2c5161b7abb1e79d27778e9023723eb37d" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s6a-073.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=e19c9b3e1c092e3609914d25fc4cc71ec2c34023b9a320efa113f516d09d69e0" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s6a-075.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=2ce6959b51c94c4d36534c159c708c6afccc2d3ba2108b4429bf1683415bd93e" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">トレジャーハントオリパ！</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 283/300</span>
+								<span data-splitting="">1口 1,000Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(167)"></a>
+					</div>
+				</div>
+
+				
+
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/EC58F5C2-CC21-460A-87EE-5CA0A1414589.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=248d80375a064564665ebb8d16a3c0ad06683a277e5ea465ae26793de394002e">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/E00A4252-C68C-4D41-84F2-E5F8D2283939.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b9ed8882eed512a47ca126ed67fef3b9351c18009c026a85d65b591e5271df7f" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm8b-153.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=f02f2ef131ff72243dff6136df7d5cc993419f7bd9ebb5a00367faf2ec389e29" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/BA64FB55-2F66-4A15-8E6D-FCA56E574817.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=5808f025a4d6dad33d4cb583d4a2cf5be735f482765df4517adafeb98190cc2c" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">夢の大当たり！ラッキーオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 1,867/2,000</span>
+								<span data-splitting="">1口 600Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(151)"></a>
+					</div>
+				</div>
+
+				
+
+				
+
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/74058309-16F9-469C-811C-47524F20CC9D.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b46013bb64c3def3acd2d25c380edba324efde2c10cb8df50826816b2673cd68">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/6116359E-8C3A-442D-A19C-FAE495D670C0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=33bdb191891866307cad3925faac14ffa0bbfb2937fa2ba5e95d774a80a30166" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/3EFA8AF1-4785-44F1-896A-0C84B02F78B0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d6f6a36aae532ea2404934888b10af8862c74332575dfb6d9ae2567f52047414" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/C007AF34-F30C-4132-BAE5-BFAEFEF1FBD2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=beebb4f8d2fa945e4852529ed9973ba52338b1955a147c8b97e4caa633ec70c2" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">パック確定！！BOXを狙えオリパ2</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 991/1,000</span>
+								<span data-splitting="">1口 500Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(147)"></a>
+					</div>
+				</div>
+
+				
+
+				<div>
+					<div class="oripa oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/B3F1026F-1887-4D5C-8E7F-7C11C96C5F1C.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=a176ae5bacfa838807cef02b21b0c3cd5394d43b7026bb51c75a4264d5e555d0">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s8b-245.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=7cb6dc76dba6483d476c61ff40c048631f3d2ef6baa0da8838512daf9d170436" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s8b-244.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d5f1c9407abdbc9e89e22ca03ab6648a85c124925f910a811c537856d892c496" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+									<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s6a-070.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3c90615b960fcaeaf9e3430b9009af8d5913ddfc6ac2321e287672f955e080df" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">ブイズオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 125/500</span>
+								<span data-splitting="">1口 550Pt</span>
+							</div>
+						</div>
+						<a onclick="toOripaDetail(120)"></a>
+					</div>
+				</div>
+
+				
+
+				
+
+				
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/AE98250C-3F1D-4C52-894A-86EF193A5225.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=96679a9152215202d0a0e441b5530ea99ad733af90450c7d401df48c3ec56c1f">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm12a-190.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=1912d4e5cd0c88052b734f86ae4f42be76c4c68a85f59e0a98f3ec3d2bce1efa" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s6a-093.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d129ee25508aa9a8b31dc7c0bc9d7d10c9f2866b172fb444fc7381f3009c3fcb" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s6a-091.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=9f2e529ea82dbabad15a7da784177dd52c06ed3354a499fc6759cf14ab823dff" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">50%で5000pt以上！るーぷおりぱ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/600</span>
+								<span data-splitting="">1口 5,000Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/73B19F47-5078-4171-8ED9-0C95B09FD41C.webp?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=417ef821fab20a335cdf781d41f7759d9f310c522739f8f2539540820f962105">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/2B5C4E0A-505A-47F9-82E6-00969B49B79E.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=203d875a9dc06ebf5c956a2ac1041b37837b7d46de25e0d3aeeae6e85b5b92da" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/94CE1BAE-4116-49EA-8A70-BB9DE4E84EF6.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=bf8f6c9b3e638cb1795609731ba38fa386aadb760952598046bc0d0164ac2e8b" alt="オリパイメージ画像">
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA9.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b41328d88af384684b142bc039fb079b3bb89734fb1dfe6c2ca4646fddfc7eaf">
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/E00A4252-C68C-4D41-84F2-E5F8D2283939.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b9ed8882eed512a47ca126ed67fef3b9351c18009c026a85d65b591e5271df7f" alt="オリパイメージ画像">
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA9.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=b41328d88af384684b142bc039fb079b3bb89734fb1dfe6c2ca4646fddfc7eaf">
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">還元率100％! ゲリラオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/10,000</span>
+								<span data-splitting="">1口 300Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/51803848-E87D-4E72-8137-9A28F891304D.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=a6b22253ce48d53fcff32065c60a0218819ff9469a90d0f8ab950f9b6f0e9bf6">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/6116359E-8C3A-442D-A19C-FAE495D670C0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=33bdb191891866307cad3925faac14ffa0bbfb2937fa2ba5e95d774a80a30166" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/3EFA8AF1-4785-44F1-896A-0C84B02F78B0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d6f6a36aae532ea2404934888b10af8862c74332575dfb6d9ae2567f52047414" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/C007AF34-F30C-4132-BAE5-BFAEFEF1FBD2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=beebb4f8d2fa945e4852529ed9973ba52338b1955a147c8b97e4caa633ec70c2" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">ワンコインオリパ！</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/1,000</span>
+								<span data-splitting="">1口 100Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/5CD6BEF2-F10F-49B3-8719-0B9AE8E26AFD.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=1847e556d0ed3cd4156ff7f629828c7e7fdf2a9f6c6cd1c29417024e5feb6568">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/4BBC3B0C-4DAF-4552-8144-B6EF29FB8039.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3fde7f48363b0a177410d46006afdaeafa58c9812622bc0d2ba0a3f3c9f3b2c4" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sm5M-067.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=6ed02df4c483a7fa58143dca2d3d2bd5e59a187a0c4bfc962d937f2adcbecf55" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s8b-245.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=7cb6dc76dba6483d476c61ff40c048631f3d2ef6baa0da8838512daf9d170436" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">還元率95%!ニブイチオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/200</span>
+								<span data-splitting="">1口 2,000Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/59BE93E7-E24B-4C1B-8042-EAF55EE93F5F.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=a011d29a523f83517c725617f17c8798d3b61de7fee1d20d2c1264bb70dcb9fb">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/BA64FB55-2F66-4A15-8E6D-FCA56E574817.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=5808f025a4d6dad33d4cb583d4a2cf5be735f482765df4517adafeb98190cc2c" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/6116359E-8C3A-442D-A19C-FAE495D670C0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=33bdb191891866307cad3925faac14ffa0bbfb2937fa2ba5e95d774a80a30166" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/C007AF34-F30C-4132-BAE5-BFAEFEF1FBD2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=beebb4f8d2fa945e4852529ed9973ba52338b1955a147c8b97e4caa633ec70c2" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">パック確定オリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/1,000</span>
+								<span data-splitting="">1口 550Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/A3ED48F1-48EA-4574-8C94-043970A22D17.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=d44344bb8507fa877d06dfc0888c260d07aa97308f3b18507701058416d4dfe4">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/s11a-081.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=882d21e89ad72fe49edba1de5d9fcd49b4597a8ec8b88c57abcd5d4e6a2c8a89" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/sv2D-091.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=05c87f0f1391a485cfd6c5f5fdbbe01834ca5030d0bf1af849fa08671325f367" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/E8781135-AAC0-4168-9396-F1EFAC3E1FAE.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=edd4769e266c0a80cec65275733109b97863574ca3e3e94fb9585cb4d4d7c9c0" alt="オリパイメージ画像">
+								
+								<img class="overlay-image" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/common/PSA10.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=3f0350bea43db7929b4cb549f645cd66260860a0e27ecb29c920a26e3e72b8a2">
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">デイリークエスト</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/1,000</span>
+								<span data-splitting="">1口 550Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				
+
+				<div>
+					<div class="oripa sold_out oripa_card_detail" data-background-img="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/oripa/2DB9C22B-76C7-4C68-A571-421AC822E3BE.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=510c3b28275f27903102e981172079d91ec9ce79b14dd032e8f9376f918368db">
+						<div class="card-box">
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/6116359E-8C3A-442D-A19C-FAE495D670C0.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=33bdb191891866307cad3925faac14ffa0bbfb2937fa2ba5e95d774a80a30166" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/498C4F12-BE7A-4371-84E5-8C594FE827AA.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=e3732b0ab5053281030c15991428a7b019f77e5b688bdf68dce9ae7dbd6ba376" alt="オリパイメージ画像">
+								
+								
+							</div>
+							<div class="card card-image">
+								<div class="shine"></div>
+								<img class="oripa_img" data-src="https://toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com/public/card/C007AF34-F30C-4132-BAE5-BFAEFEF1FBD2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20240703T030337Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Expires=6000&amp;X-Amz-Signature=beebb4f8d2fa945e4852529ed9973ba52338b1955a147c8b97e4caa633ec70c2" alt="オリパイメージ画像">
+								
+								
+							</div>
+						</div>
+						<div class="oripa_content">
+							<h3 class="oripa_name">
+								<span class="line2" data-splitting="">パック確定！！BOXを狙えオリパ</span>
+							</h3>
+							<div class="oripa_number oripa_name_1">
+								<span data-splitting="">残り 0/800</span>
+								<span data-splitting="">1口 550Pt</span>
+							</div>
+						</div>
+						<a></a>
+						<div class="sold_out_msg">SOLD OUT</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+			<div class="information">
+				<h2>お知らせ</h2>
+				<div class="panel">
+					<div class="info_detail">
+						<div class="date">2024.06.19</div>
+						<div class="content">シャイニートレカは、�&nbsp;�式会社Iranoanの特許システ�&nbsp;（特許番号：第7472179号）について調査を行いました。  弊社弁理士と協議の結果、本オリパシステ�&nbsp;は当該特許を侵害していないとの見解に至りました。ユーザーの皆様には、引き続き安心して当社のオリパ購入をご利用いた�&nbsp;けます。 </div>
+					</div>
+					<div class="info_detail">
+						<div class="date">2023.12.11</div>
+						<div class="content">継続してシステ�&nbsp;の改善を行っております。画像が表示されない�&nbsp;�合はブラウザを再起動することにより表示できます。お手数おかけしますがご協力お願いいたします。</div>
+					</div>
+					<div class="info_detail">
+						<div class="date">2023.12.08</div>
+						<div class="content">毎週月曜日 14:00から17:00まで定期メンテナンスを行います。ご理解とご協力をお願いいたします。</div>
+					</div>
+				</div>
+			</div>
+		</div></main>
+		<div id="dialog" title="">
+			<p id="dialogMsg"></p>
+		</div>
+		<div class="cover" style="display: none"></div>
+		
+<footer class="parentF">
+    <div class="footer_container">
+        <ul class="footer_list">
+            <li><a href="/questions/10">プライバシーポリシー</a></li>
+            <li><a href="/questions/1">偽�&nbsp;品撲滅への取り組み</a></li>
+            <li><a href="/questions/4">特定商取引法に基づく表記</a></li>
+        </ul>
+        <ul class="footer_list">
+            <li><a href="/questions/3">利用規約</a></li>
+            <li><a href="/questions/5">β版を提供開始</a></li>
+            <li><a href="/questions/2">全額補償について</a></li>
+        </ul>
+    </div>
+    <div class="footer_note">明細書表記（ST オンライン店）</div>
+</footer>
+
+	</div>
+
+<script>
+var curpage = 1;
+var sliding = false;
+var click = true;
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var pagePrefix = "slide";
+var pageShift = 500;
+var transitionPrefix = "circle";
+var svg = true;
+// Define an array of slide content
+/* const slideContent = [
+  "1MOUNTAIN",
+  "2BEACH",
+  "3FOREST",
+  "4DESERT",
+  "5CITY",
+  // Add more slide content as needed
+]; */
+var arr = ["https:\/\/toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com\/public\/image_setting\/6D5E0340-2359-4938-B088-9ECE149D01E2.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20240703T030337Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request\u0026X-Amz-Expires=6000\u0026X-Amz-Signature=6f24763f312a6f33f87782aca3f6c8b7191fb978f2688cc06b8915fc398953f2","https:\/\/toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com\/public\/image_setting\/6A3E372D-C6ED-461B-A668-125F8175AF67.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20240703T030337Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request\u0026X-Amz-Expires=6000\u0026X-Amz-Signature=b2d6312e28b3e41c812132caef2ae2cbfa270e2cd499f8cfdf037961cedbf6b3","https:\/\/toreca-prod150639-prod.s3.ap-northeast-1.amazonaws.com\/public\/image_setting\/C036DC0F-F40B-4F71-B356-53F5A5577208.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgE7sxu5vUpOfZkA7Vgqyjesi%2BRB1yuGjWVbNwb2exyNQCIAKa7bHxqZJ2tTeZAlCDMFe%2BmvV2hS9%2FkwPnjz8N5vsiKrACCIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNDI2OTcxNzA1MDgwIgxsN105BfB2OiaOSD8qhAIRBvuuaLpF8G9TjSDKIYd%2Fdn%2B5rR3gkVFWOvo2sWpQyZIndMKVIrLLBQw0euboUdCvZByTFXmXx%2F5xiM17pYUPshLCY8dOcoqgf6hY4tvMqzbw6Gs6PSqkD4uEodO09z1fj19bh0mYlACNRDZkUF8F0HAlGIJkUkVHDY%2BKMHG6DhX%2FblU1%2ByHuvLcrYl80kLbVB8s9G4GydKJXEvf9urQy4AdmftR3zQ7sd3giuyJR%2FMBmmEVOe9dJaeLnS8whigvTlEQpKCsg%2FxMOvcgD3gcNO7IoquGxiMh%2F4VhkUh4aq4aK42e68c3kLHs5tCsj6c2%2FL%2B0BVo%2BiUy2Y9dy%2BzuYoixMbxDCJ%2F5K0BjqeAd61hZBuwPKn2ygV6%2FSb1qmPYEH%2BBrundOGy0Ng0DSP1iAd%2FZHmkB9ruXjIVNfb%2F0EXCa43svcE698VmpjVMKUGu052%2F%2BHna%2BuYx1O0ayHVU5Z525j4peXhCwYFr4POA72UrCiWqB6d36Cki8IbouME2ZYF2ldwTYtSDVSA%2Fk%2Fb827hng%2BwQWlKaHshmxPqkLRpggNDedsMXnl3uGMfh\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20240703T030337Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Credential=ASIAWG2L7F34O573GDIH%2F20240703%2Fap-northeast-1%2Fs3%2Faws4_request\u0026X-Amz-Expires=6000\u0026X-Amz-Signature=11fcd9e2b13601da620c5fde81d50db536e196c02e86693ce1b6ef737125664e"];
+if (arr == null) {
+    arr = ["default/noimage.png"]
+}
+var imageArray = arr.map(function(item) {
+    return item;
+});
+var slideContent = new Array(arr.length).fill('');
+
+// Get the parent element where the slides will be inserted
+const sliderContainer = document.querySelector('.slider');
+
+// Function to create a slide with dynamic content
+function createSlide(content, i) {
+  const slide = document.createElement('div');
+  slide.classList.add('slide' + i);
+  slide.id = `slide${i}`;
+  slide.style.backgroundSize = 'cover';
+  slide.style.backgroundPosition = 'center center';
+  slide.style.backgroundRepeat = 'no-repeat';
+  slide.textContent = content;
+  sliderContainer.appendChild(slide);
+  if (i == 1) {
+    var a = document.getElementById(pagePrefix + i);
+    a.className += " up1";
+  }
+}
+
+// You can add more slide content to the slideContent array as needed.
+// Define an array of image URLs
+// document.addEventListener("DOMContentLoaded", function () {
+
+
+const slideImages = imageArray;
+for (let i = 1; i <= slideContent.length; i++) {
+	  createSlide(slideContent[i - 1], i);
+	}
+// Function to update the background image of a slide
+function updateSlideBackground(slideNumber) {
+  const slideElement = document.getElementById(`slide${slideNumber}`);
+  slideElement.style.backgroundImage = `url(${slideImages[slideNumber - 1]})`;
+}
+
+// Call the updateSlideBackground function to set the initial images
+for (let i = 1; i <= slideImages.length; i++) {
+  updateSlideBackground(i);
+}
+// });
+
+
+// You can now update the slide images dynamically as needed, e.g., in response to user actions or events.
+
+function leftSlide() {
+  if (click) {
+    if (curpage == 1) curpage = slideImages.length + 1;
+    sliding = true;
+    curpage--;
+    svg = true;
+    click = false;
+    for (k = 1; k <= slideImages.length; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
+    }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= slideImages.length; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
+  }
+}
+
+function rightSlide() {
+  if (click) {
+    if (curpage == slideImages.length) curpage = 0;
+    sliding = true;
+    curpage++;
+    svg = false;
+    click = false;
+    for (k = 1; k <= slideImages.length; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
+    }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= slideImages.length; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
+  }
+}
+
+function move() {
+  if (sliding) {
+    sliding = false;
+    if (svg) {
+      for (j = 1; j <= 9; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    } else {
+      for (j = 10; j <= 18; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    }
+    setTimeout(() => {
+      for (i = 1; i <= slideImages.length; i++) {
+        if (i == curpage) {
+          var a = document.getElementById(pagePrefix + i);
+          a.className += " up1";
+        } else {
+          var b = document.getElementById(pagePrefix + i);
+          b.classList.remove("up1");
+        }
+      }
+      sliding = true;
+    }, 600);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
+
+    setTimeout(() => {
+      if (svg) {
+        for (j = 1; j <= 9; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+      } else {
+        for (j = 10; j <= 18; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+        sliding = true;
+      }
+    }, 850);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
+  }
+}
+
+left.onmousedown = () => {
+  leftSlide();
+};
+
+right.onmousedown = () => {
+  rightSlide();
+};
+
+document.onkeydown = e => {
+  if (e.keyCode == 37) {
+    leftSlide();
+  } else if (e.keyCode == 39) {
+    rightSlide();
+  }
+};
+
+const intervalId = setInterval(rightSlide, 6000);
+
+//for codepen header
+// setTimeout(() => {
+//  rightSlide();
+// }, 500);
+</script>
+</body></html>
